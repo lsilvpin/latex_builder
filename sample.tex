@@ -8,15 +8,17 @@
 \usepackage{tcolorbox}
 \usepackage{helvet}
 \usepackage{setspace}
+\usepackage{hyperref}
 
-% Configuração da fonte e espaçamento - Abnt
-\renewcommand{\familydefault}{\sfdefault}
-\onehalfspacing
-
-% Configuração do título
-\title{\bfseries\fontsize{16}{16}\selectfont Título do Artigo}
-\author{}
-\date{}
+% Ajustar espaçamentos ao redor do texto
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=3cm
+}
 
 % Configuração do cabeçalho e rodapé
 \usepackage{fancyhdr}
@@ -26,13 +28,22 @@
 \lhead{Título do Artigo}
 \rfoot{Página \thepage}
 
+% Configuração da fonte e espaçamento - Abnt
+\renewcommand{\familydefault}{\sfdefault}
+\onehalfspacing
+
+% Configuração do título
+\title{\bfseries\fontsize{16}{16}\selectfont Título do Artigo}
+\author{}
+\date{}
+    
 % Início do documento
 \begin{document}
 
 % Adição de imagem
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{Metamorph_All.jpeg}
+    \includegraphics[width=0.5\textwidth]{./images/Metamorph_All.jpeg}
     \maketitle
 \end{figure}
 \newpage
@@ -46,10 +57,10 @@
 \section{Introdução}
 \lipsum[1]
 
-% Inclusão de tabela
+% Inclusão de tabela justificada
 \begin{table}[h]
     \centering
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
         \hline
         Coluna 1 & Coluna 2 & Coluna 3 \\
         \hline
@@ -60,8 +71,19 @@
         7 & 8 & 9 \\
         \hline
     \end{tabular}
-    \caption{Exemplo de tabela}
+    \caption{Exemplo de tabela justificada}
 \end{table}
+
+% Exemplo de conteúdo JSON
+\begin{tcolorbox}
+\begin{verbatim}
+{
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3"
+}
+\end{verbatim}
+\end{tcolorbox}
 
 % Inclusão de seção
 \section{Desenvolvimento}
@@ -74,6 +96,9 @@
 % Inclusão de sub-tópico
 \subsubsection{Subsub-tópico 1}
 \lipsum[1]
+
+% Inclusão de Link com aparência de link
+\href{https://www.google.com}{\textbf{\textcolor{blue}{\underline{Google}}}}
 
 % Inclusão de sub-tópico
 \subsubsection{Subsub-tópico 2}
