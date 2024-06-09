@@ -9,6 +9,7 @@
 \usepackage{helvet}
 \usepackage{setspace}
 \usepackage{hyperref}
+\usepackage{media9}
 
 % Ajustar espaçamentos ao redor do texto
 \usepackage{geometry}
@@ -24,9 +25,12 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Nome do Autor}
-\lhead{Título do Artigo}
-\rfoot{Página \thepage}
+\lhead{\includegraphics[width=0.5cm]{./images/appService.png} \space\space Canto esquerdo}
+\chead{No centro \space\space \includegraphics[width=0.5cm]{./images/appService.png} \space\space No centro}
+\rhead{Canto direito \space\space \includegraphics[width=0.5cm]{./images/appService.png}}
+\lfoot{\includegraphics[width=0.5cm]{./images/appService.png} \space\space Rodapé esquerdo}
+\cfoot{Rodapé central \space\space \includegraphics[width=0.5cm]{./images/appService.png} \space\space Rodapé central}
+\rfoot{Página \thepage \space\space \includegraphics[width=0.5cm]{./images/appService.png}}
 
 % Configuração da fonte e espaçamento - Abnt
 \renewcommand{\familydefault}{\sfdefault}
